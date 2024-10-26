@@ -1,4 +1,4 @@
-package com.example.locationservice.location_service.config;
+package com.example.chargingstationservice.charging_station_service.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

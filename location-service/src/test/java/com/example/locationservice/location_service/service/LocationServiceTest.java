@@ -49,7 +49,7 @@ class LocationServiceTest {
         locationService.updateCarLocation(carLocation);
 
         Mockito.verify(valueOperations, Mockito.times(1))
-                .set(carId, location, Duration.ofSeconds(60));
+                .set(carId, location, Duration.ofSeconds(600));
     }
 
     @Test

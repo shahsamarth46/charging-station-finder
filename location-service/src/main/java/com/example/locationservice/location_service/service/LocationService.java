@@ -14,7 +14,7 @@ public class LocationService {
     private RedisTemplate<String, String> redisTemplate;
 
     public void saveCarLocation(CarLocation carLocation) {
-        redisTemplate.opsForValue().set(carLocation.getCarId(), carLocation.getLocation(), Duration.ofSeconds(60));
+        redisTemplate.opsForValue().set(carLocation.getCarId(), carLocation.getLocation(), Duration.ofSeconds(600));
     }
 
     public String getCarLocation(String carId) {

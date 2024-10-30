@@ -62,6 +62,9 @@ class ChargingStationServiceTest {
         List<ChargingStations> chargingStations = chargingStationService.findNearestChargingStationBasedOnPreference(carId, 5L);
         Assertions.assertThat(chargingStations).isNotNull();
         Assertions.assertThat(chargingStations.size()).isEqualTo(1);
+        Assertions.assertThat(chargingStations.get(0))
+                .hasFieldOrPropertyWithValue("name", "station 1")
+                .hasFieldOrPropertyWithValue("id", 1L);
 
 
     }

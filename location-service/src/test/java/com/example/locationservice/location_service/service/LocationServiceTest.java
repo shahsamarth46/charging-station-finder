@@ -46,7 +46,7 @@ class LocationServiceTest {
 
         Mockito.doNothing().when(valueOperations).set(carId, location, Duration.ofSeconds(600));
 
-        locationService.saveCarLocation(carLocation);
+        locationService.updateCarLocation(carLocation);
 
         Mockito.verify(valueOperations, Mockito.times(1))
                 .set(carId, location, Duration.ofSeconds(60));

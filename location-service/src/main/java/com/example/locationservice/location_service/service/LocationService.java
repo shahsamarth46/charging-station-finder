@@ -13,7 +13,7 @@ public class LocationService {
     @Autowired
     private RedisTemplate<String, String> redisTemplate;
 
-    public void saveCarLocation(CarLocation carLocation) {
+    public void updateCarLocation(CarLocation carLocation) {
         redisTemplate.opsForValue().set(carLocation.getCarId(), carLocation.getLocation(), Duration.ofSeconds(600));
     }
 

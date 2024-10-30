@@ -15,8 +15,8 @@ public class LocationController {
     private LocationService locationService;
 
     @PutMapping(UrlConstant.UPDATE_CURRENT_LOCATION)
-    public ResponseEntity<?> saveCarLocation(@RequestBody CarLocation carLocation) {
-        locationService.saveCarLocation(carLocation);
+    public ResponseEntity<?> updateCarLocation(@RequestBody CarLocation carLocation) {
+        locationService.updateCarLocation(carLocation);
         return new ResponseEntity<>(carLocation,HttpStatus.NO_CONTENT);
     }
 
